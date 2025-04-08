@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        window.onload = function() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            let redirectURL = '';
+
+            // IOS Link
+            if (/iphone|ipad|ipod/.test(userAgent)) {
+                redirectURL = 'https://apps.apple.com/us/app/grok/id6670324846';
+            }
+            // Android Link
+            else if (/android/.test(userAgent)) {
+                redirectURL = 'https://play.google.com/store/apps/details?id=ai.x.grok&hl';
+            }
+            // For PC and other else
+            else {
+                redirectURL = 'https://idecar.app/';
+            }
+
+            // Fast Redirect
+            window.location.href = redirectURL;
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
